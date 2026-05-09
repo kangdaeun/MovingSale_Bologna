@@ -128,18 +128,20 @@ else:
         # 사이드바
         with st.sidebar:
             st.header("📢 Notice")
-            st.info("Everything must be picked up in person! Cash or online transfer accepted.\nContact me via E-mail/WhatsApp")
+            st.info("Everything must be picked up in person! Cash or online transfer accepted.\nContact me via E-mail or WhatsApp")
 
             # st.write(f"📍 **Location:** {MY_LOCATION}")
             st.markdown("### 📍 Pickup Locations")
             st.write("**1. Private Residence:**")
-            st.write("In Bolognina destrict (10 min bike from Campus Navile)")
+            st.write("Bolognina destrict (10min bike from Campus Navile)")
             st.write("*Detailed address shared after appointment.*")
             st.write("**2. Office:**")
             st.write("UniBo Navile Campus, U-XX Room XXX")
             st.write("---")
-            st.write("📅 **Last date for pick-up:** June 24th, **Last date for contact:** June 22th")
+            st.write("📅 **Last date for pick-up:** June 24th") 
+            st.write("📅 **Last date for contact:** June 22th")
             st.write("---")
+            # st.markdown("### 📍 Contact")
             
             # 필터 기능
             all_tags = []
