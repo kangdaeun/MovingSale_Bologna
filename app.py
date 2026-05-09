@@ -123,6 +123,12 @@ if st.session_state.selected_item_id is not None and df is not None:
         c1.link_button("📧 Email Me", f"mailto:{MY_EMAIL}?subject=Inquiry: {item['Title']}")
         c2.link_button("💬 WhatsApp", f"https://wa.me/{MY_WHATSAPP}")
 
+    # 상세 페이지의 모든 정보 출력 후 맨 아래에 추가
+    st.write("---") # 구분선 하나 넣어주면 더 깔끔합니다.
+    if st.button("⬅️ Back to List", key="back_button_bottom"):
+        st.session_state.selected_item_id = None
+        st.rerun()
+
 # --- 6. [메인 목록 화면] ---
 else:
     st.title("🇮🇹 Moving Sale by D.E. Kang")
