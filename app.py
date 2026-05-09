@@ -29,6 +29,10 @@ st.markdown("""
         object-fit: contain !important;
         margin-bottom: 20px;
     }
+    /* 카드 내 텍스트 간격 미세 조정 */
+    .stMarkdown p {
+        margin-bottom: 5px;
+    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -99,7 +103,7 @@ if st.session_state.selected_item_id is not None and df is not None:
         st.header(item['Title'])
         st.subheader(f"💰 Price: {item['Price']}")
         
-        # Status 표시 (이전 스타일 복구)
+        # Status 표시
         status = str(item['Status']).upper()
         if "AVAILABLE" in status: st.success(f"🟢 {status}")
         elif "FREE" in status: st.info(f"🎁 {status}")
@@ -121,7 +125,7 @@ else:
     st.title("🇮🇹 Italy Moving Sale")
     
     if df is not None:
-        # 사이드바 (기존 정보 유지)
+        # 사이드바
         with st.sidebar:
             st.header("📢 Notice")
             st.info("Everything must go by my departure date! Cash or online transfer accepted.")
@@ -145,7 +149,7 @@ else:
         for idx, row in filtered_df.iterrows():
             with cols[idx % 3]:
                 with st.container(border=True):
-                    # 메인 카드는 크롭된 이미지 사용
+                    # 메인 카드 이미지
                     img = get_cropped_image(row['Main_Img'])
                     if img:
                         st.image(img, width='stretch')
@@ -153,16 +157,18 @@ else:
                     st.subheader(row['Title'])
                     st.markdown(f"### **{row['Price']}**")
                     
-                    # 카드 내 Status 및 필수 정보 (이전 스타일 유지)
+                    # 카드 내 정보 선명도 개선 (st.caption -> st.write)
                     status = str(row['Status']).upper()
-                    if "AVAILABLE" in status: st.caption(f"🟢 **{status}**")
-                    elif "FREE" in status: st.caption(f"🎁 **{status}**")
-                    elif "RESERVED" in status: st.caption(f"🟡 **{status}**")
-                    else: st.caption(f"🔴 **{status}**")
+                    if "AVAILABLE" in status: st.write(f"🟢 **{status}**")
+                    elif "FREE" in status: st.write(f"🎁 **{status}**")
+                    elif "RESERVED" in status: st.write(f"🟡 **{status}**")
+                    else: st.write(f"🔴 **{status}**")
                     
-                    st.caption(f"📍 {row.get('Pickup_Location', 'N/A')}")
-                    st.caption(f"🏷️ {row.get('Tags', '')}")
+                    st.write(f"📍 {row.get('Pickup_Location', 'N/A')}")
+                    st.write(f"🏷️ {row.get('Tags', '')}")
 
+                    # 버튼 간격 확보를 위한 공백
+                    st.write("")
                     if st.button("View Details", key=f"id_{row['ID']}", width='stretch'):
                         st.session_state.selected_item_id = row['ID']
                         st.rerun()
