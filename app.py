@@ -132,6 +132,7 @@ if st.session_state.selected_item_id is not None and df is not None:
 # --- 6. [메인 목록 화면] ---
 else:
     st.title("🇮🇹 Moving Sale by D.E. Kang")
+    st.info("💡 **Pickup Locations & Important Notices** are available in the sidebar (Click **>** at the top-left).")
     
     if df is not None:
         # 사이드바
