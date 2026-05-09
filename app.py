@@ -73,6 +73,9 @@ if 'selected_item_id' not in st.session_state:
     st.session_state.selected_item_id = None
 
 df = load_data()
+# 추가할 코드: 'Display' 열이 'Y'인 행만 필터링
+if df is not None and 'Display' in df.columns:
+    df = df[df['Display'] == 'Y']
 
 # --- 5. [상세 페이지 화면] ---
 if st.session_state.selected_item_id is not None and df is not None:
