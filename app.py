@@ -122,15 +122,23 @@ if st.session_state.selected_item_id is not None and df is not None:
 
 # --- 6. [메인 목록 화면] ---
 else:
-    st.title("🇮🇹 Italy Moving Sale")
+    st.title("🇮🇹 Moving Sale by D.E. Kang")
     
     if df is not None:
         # 사이드바
         with st.sidebar:
             st.header("📢 Notice")
-            st.info("Everything must go by my departure date! Cash or online transfer accepted.")
-            st.write(f"📍 **Location:** {MY_LOCATION}")
-            st.write("📅 **Departure:** July 30th")
+            st.info("Everything must be picked up in person! Cash or online transfer accepted.\nContact me via E-mail/WhatsApp")
+
+            # st.write(f"📍 **Location:** {MY_LOCATION}")
+            st.markdown("### 📍 Pickup Locations")
+            st.write("**1. Private Residence:**")
+            st.write("In Bolognina destrict (10 min bike from Campus Navile)")
+            st.write("*Detailed address shared after appointment.*")
+            st.write("**2. Office:**")
+            st.write("UniBo Navile Campus, U-XX Room XXX")
+            st.write("---")
+            st.write("📅 **Last date for pick-up:** June 24th, **Last date for contact:** June 22th")
             st.write("---")
             
             # 필터 기능
