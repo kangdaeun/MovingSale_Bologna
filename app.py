@@ -155,7 +155,7 @@ else:
             st.divider()
             st.subheader("📬 Contact Information")
             st.caption(f"Email: {MY_EMAIL}")
-            st.caption(f"WhatsApp: {MY_APP}")
+            st.caption(f"WhatsApp: {MY_WHATSAPP}")
 
             # 왓츠앱 버튼 (f-string을 사용하여 변수 삽입)
             # 왓츠앱 링크 형식: https://wa.me/국가번호번호
