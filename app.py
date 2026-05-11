@@ -146,12 +146,23 @@ else:
             st.write("Bolognina destrict (10min bike from Campus Navile)")
             st.write("*Detailed address shared after appointment.*")
             st.write("**2. Office:**")
-            st.write("UniBo Navile Campus, U-XX Room XXX")
+            st.write("UniBo Navile Campus, U-XX Room 2S4")
             st.write("---")
             st.write("📅 **Last date for pick-up:** June 24th") 
             st.write("📅 **Last date for contact:** June 22th")
             st.write("---")
             # st.markdown("### 📍 Contact")
+            st.divider()
+            st.subheader("📬 Contact Information")
+            st.caption(f"Email: {MY_EMAIL}")
+            st.caption(f"WhatsApp: {MY_APP}")
+
+            # 왓츠앱 버튼 (f-string을 사용하여 변수 삽입)
+            # 왓츠앱 링크 형식: https://wa.me/국가번호번호
+            st.link_button("Chat on WhatsApp", f"https://wa.me/{MY_WHATSAPP}", use_container_width=True)
+            
+            # 이메일 버튼 (f-string을 사용하여 변수 삽입)
+            st.link_button("Send an Email", f"mailto:{MY_EMAIL}", use_container_width=True)
             
             # 필터 기능
             all_tags = []
