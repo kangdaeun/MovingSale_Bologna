@@ -171,7 +171,7 @@ else:
             
             # 이메일 버튼 (f-string을 사용하여 변수 삽입)
             st.link_button("Send an Email", f"mailto:{MY_EMAIL}", use_container_width=True)
-            
+            st.write("You can also use buttons in 'View Details' pages")
             
 
         filtered_df = df
