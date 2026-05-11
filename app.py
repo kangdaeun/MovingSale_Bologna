@@ -8,8 +8,8 @@ SHEET_ID = "1gW4rUJxY06nEgXWVQL0U5-lSo3PvRjXfDcJ_3rCPL1U"
 SHEET_URL = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv&gid=0"
 PHOTO_DIR = "photos"
 
-MY_EMAIL = "your-email@gmail.com"  # 사용자님의 이메일로 수정하세요
-MY_WHATSAPP = "+390000000000"     # 사용자님의 번호로 수정하세요
+MY_EMAIL = "daeun.astro@gmail.com"  # 사용자님의 이메일로 수정하세요
+MY_WHATSAPP = "+491639270439"     # 사용자님의 번호로 수정하세요
 MY_LOCATION = "Bologna, Italy"     # 사용자님의 지역으로 수정하세요
 
 st.set_page_config(page_title="Bologna Moving Sale", layout="wide")
@@ -131,8 +131,8 @@ if st.session_state.selected_item_id is not None and df is not None:
 
 # --- 6. [메인 목록 화면] ---
 else:
-    st.title("🇮🇹 Moving Sale by D.E. Kang")
-    st.info("💡 **Pickup Locations & Important Notices** are available in the sidebar (Click **>** at the top-left).")
+    st.title("🇮🇹 Moving Sale by Da Eun")
+    st.info("💡 **Pickup Locations & Important Notices** are available in the sidebar (Click **>>** at the top-left).")
     
     if df is not None:
         # 사이드바
@@ -192,3 +192,8 @@ else:
                     if st.button("View Details", key=f"id_{row['ID']}", width='stretch'):
                         st.session_state.selected_item_id = row['ID']
                         st.rerun()
+
+
+
+
+                        
