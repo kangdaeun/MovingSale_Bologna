@@ -151,6 +151,14 @@ else:
             st.write("📅 **Last date for pick-up:** June 24th") 
             st.write("📅 **Last date for contact:** June 22th")
             st.write("---")
+
+            # 필터 기능
+            all_tags = []
+            for tags in df['Tags'].dropna():
+                all_tags.extend([t.strip() for t in str(tags).split(',')])
+            unique_tags = sorted(list(set(all_tags)))
+            selected_tags = st.multiselect("Filter by Category", unique_tags)
+
             # st.markdown("### 📍 Contact")
             st.divider()
             st.subheader("📬 Contact Information")
@@ -164,12 +172,7 @@ else:
             # 이메일 버튼 (f-string을 사용하여 변수 삽입)
             st.link_button("Send an Email", f"mailto:{MY_EMAIL}", use_container_width=True)
             
-            # 필터 기능
-            all_tags = []
-            for tags in df['Tags'].dropna():
-                all_tags.extend([t.strip() for t in str(tags).split(',')])
-            unique_tags = sorted(list(set(all_tags)))
-            selected_tags = st.multiselect("Filter by Category", unique_tags)
+            
 
         filtered_df = df
         if selected_tags:
