@@ -143,7 +143,7 @@ else:
             # st.write(f"📍 **Location:** {MY_LOCATION}")
             st.markdown("### 📍 Pickup Locations")
             st.write("**1. Private Residence:**")
-            st.write("Bolognina destrict (10min bike from Campus Navile)")
+            st.write("Bolognina destrict near Ippodromo (10min bike from Campus Navile)")
             st.write("*Detailed address shared after appointment.*")
             st.write("**2. Office:**")
             st.write("UniBo Navile Campus, U-XX Room 2S4")
