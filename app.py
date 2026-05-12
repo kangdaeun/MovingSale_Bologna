@@ -131,9 +131,14 @@ if st.session_state.selected_item_id is not None and df is not None:
 
 # --- 6. [메인 목록 화면] ---
 else:
-    st.title("🇮🇹 Moving Sale by Da Eun")
+    st.title("🇮🇹 Moving Sale by Da Eun 📦")
+    st.markdown("""
+                ### Welcome!
+                I am leaving Bologna soon and organizing my belongings. Most items are **brand new or in excellent condition**, and I'd love for them to find a new home. 
+
+                From household essentials to electronics, feel free to explore the list. **Don't miss the FREE giveaway items at the end!**
+                """)
     st.info("💡 **Pickup Locations & Important Notices** are available in the sidebar (Click **>>** at the top-left).")
-    
     if df is not None:
         # 사이드바
         with st.sidebar:
