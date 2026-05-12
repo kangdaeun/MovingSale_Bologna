@@ -151,7 +151,7 @@ else:
             st.write("Bolognina destrict near Ippodromo (10min bike from Campus Navile)")
             st.write("*Detailed address shared after appointment.*")
             st.write("**2. Office:**")
-            st.write("UniBo Navile Campus, U-XX Room 2S4")
+            st.write("UniBo (Navile) UE3 Office 2S4")
             st.write("---")
             st.write("📅 **Last date for pick-up:** June 24th") 
             st.write("📅 **Last date for contact:** June 22th")
